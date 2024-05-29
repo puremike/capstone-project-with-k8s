@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dockerfile
+  template:
+    metadata:
+      labels:
+        app: dockerfile
+    spec:
+      containers:
+        - name: dockerfile
+          image: scophee/dockerfile:latest
+          ports:
+            - containerPort: 80
