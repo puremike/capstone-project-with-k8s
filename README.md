@@ -10,23 +10,19 @@
 
    a. I created a dockerfile; utilized nginx as my base image, copied my working directory, and copy my index.html and index.css files in the dockerfile
 
-   Here is the script:
+   Here is the dockerfile:
 
-   # Use the official NGINX image from the Docker Hub
-
+   #Use the official NGINX image from the Docker Hub
    FROM nginx:latest
 
-   # Set the working directory in the container
-
+   #Set the working directory in the container
    WORKDIR /usr/share/nginx/html/
 
-   # Copy the HTML and CSS files to the appropriate directory in the container
-
+   #Copy the HTML and CSS files to the appropriate directory in the container
    COPY index.html /usr/share/nginx/html/index.html
    COPY styles.css /usr/share/nginx/html/styles.css
 
-   # Expose port 80
-
+   #Expose port 80
    EXPOSE 80
 
    b. I built an image using the docker file:
