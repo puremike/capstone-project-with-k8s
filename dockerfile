@@ -1,8 +1,8 @@
 # Use the official NGINX image from the Docker Hub
 FROM nginx:latest
 
-# Copy custom configuration file from the current directory
-COPY nginx.conf /etc/nginx/nginx.conf
+# Set the working directory in the container
+WORKDIR  /usr/share/nginx/html/
 
 # Copy the HTML and CSS files to the appropriate directory in the container
 COPY index.html /usr/share/nginx/html/index.html
