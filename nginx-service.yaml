@@ -4,7 +4,7 @@ metadata:
   name: nginx-service
 spec:
   selector:
-    app: dockerfile
+    app: my-app
   ports:
     - protocol: TCP
       port: 80
